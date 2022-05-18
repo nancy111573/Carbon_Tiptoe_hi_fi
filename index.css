@@ -1,0 +1,39 @@
+.primary-color {
+    color: #000;
+    background-color: #E5BE01;
+    overflow: hidden;
+    font-family: "Lato", sans-serif
+}
+
+.secondary-color {
+    color: #fff;
+    background-color: #315CA5;
+}
+.secondary-color button {
+    border: none;
+    font-size: 27px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 24px 36px;
+    color: #fff;
+    background-color: #315CA5;
+}
+button:hover {
+    background-color: #E5BE01;
+    color: #000;
+}
+button.active {
+    background-color: #E5BE01;
+    color: #000;
+}
+
+.popUp {
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 5%;
+    top: 10%;
+    width: 80%;
+    border-radius: 15px; 
+    padding: 2% 3%;
+    background-color: #E5BE01;
+}
