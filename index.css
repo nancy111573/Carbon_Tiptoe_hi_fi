@@ -1,18 +1,21 @@
-.primary-color {
+.custom-background-color {
     color: #000;
     background-color: #E5BE01;
-    overflow: hidden;
     font-family: "Lato", sans-serif
 }
-
 .secondary-color {
     color: #fff;
     background-color: #315CA5;
 }
-.secondary-color button {
+.my-background-color {
+    color: #fff;
+    background-color: #547BBC;
+}
+
+button {
     border: none;
-    font-size: 27px;
-    font-weight: bold;
+    font-size: 27px !important;
+    font-weight: bold !important;
     border-radius: 5px;
     padding: 24px 36px;
     color: #fff;
@@ -22,18 +25,48 @@ button:hover {
     background-color: #E5BE01;
     color: #000;
 }
-button.active {
-    background-color: #E5BE01;
+
+.trigger-modal:hover {
+    background-color: #ECA600;
+}
+
+.ct-form {
+    position: fixed;
+    z-index: 1;
+    left: 10%;
+    top: 15%;
+    width: 80%;
+    bottom: 10%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #fff;
+    border-radius: 15px;
     color: #000;
 }
 
-.popUp {
-    position: fixed;
-    z-index: 1; /* Sit on top */
-    left: 5%;
-    top: 10%;
-    width: 80%;
-    border-radius: 15px; 
-    padding: 2% 3%;
-    background-color: #E5BE01;
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+input:focus {
+    border: 1px solid #E5BE01;
+}
+
+.submit {
+    font-size: 17px !important;
+    padding: 14px 26px;
+    width: 100%;
+}
+
+.close {
+    float: right; 
+    margin-right: 25px; 
+    font-size: 20px;
+}
+.close:hover {
+    color: #fff;
 }
