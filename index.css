@@ -63,9 +63,11 @@ input:focus {
 }
 
 .close {
-    float: right; 
-    margin-right: 25px; 
+    float: right;
+    margin-right: 5%;
     font-size: 20px;
+    background-color: transparent;
+    color: #000;
 }
 .close:hover {
     color: #fff;
