@@ -7,20 +7,25 @@
         <script src="index.js"></script>
     </head>
 
-    <body class='my-background-color'>
+    <body class='my-background-color' style="font-family: 'Lato', sans-serif">
 
-        <div class="secondary-color w3-center">
+        <div class="secondary-color w3-center" style="position: fixed; z-index: 1; top: 0; width: 100%">
             <nav>
                 <button id="home">Logo</button>
                 <button>Calculator</button>
                 <button>My Report</button>
                 <button>Compare</button>
                 <button>What If</button>
+                <button style="right: 3%; font-weight: normal; background-color: transparent; position: fixed;">
+                    Log in <i class='fa fa-user'></i>
+                </button>
             </nav> 
         </div>
 
+        <!--Sunflower image adopted from digital photograph by Michel Schepers,
+            avaliable at: https://pin.it/5CA6UHp, accesed: 21/05/2022-->
         <div class="w3-display-container">
-            <img src="sunflower.jpg" alt="plain sunflower" style="width: 100%">
+            <img src="sunflower.jpg" alt="sunflower under the sky" style="width: 100%; margin-top: 89px">
             <div 
                 class="w3-display-bottomright w3-display-container"
                 style="text-align: right; width: 30%; margin: 5%"
@@ -28,46 +33,62 @@
                 <h1 
                     style="text-align: left; font-weight: bold;"
                 > Join Carbon Tiptoe!</h1>
-                <p style="text-align: left">
+                <h4 style="text-align: left">
                     Join our membership to store your report results! 
                     Find out how your results changed with the What If Report. 
                     Your small step is our big step, join us in reducing carbon emission.
                     Join our membership to store your report results! 
                     Find out how your results changed with the What If Report. 
                     Your small step is our big step, join us in reducing carbon emission.
-                </p>
+                </h4>
                 <div id="trigger-modal">
-                    <button class="trigger-modal custom-background-color" onclick="showForm();">
+                    <button class="trigger-modal w3-text-black custom-color" onclick="showForm();">
                         REGISTER
                     </button>
                 </div>
             </div>
         </div>
         
-        <div class="custom-background-color" style="padding: 2% 5%;">
-            <h1>About Us</h1>
-            <p>
-                In BT1 most participants read the result of 26 CO2e, which is the result at the final stage of the
-                task, but did not recognise it is a change from the 24 CO2e from the initial screen. This can
-                indicate issues in both system status and recognition rather than recall heuristics. After the
-                participants read the wrong result, we prompted them to read again and stated: “Try to find out
-                how much carbon footprint the ferry produced alone”. Most participants found it tricky to do
-                task one, as the prototype did not help them recall the result of the previous steps and the detail
-                of each row does not show until the next page.
-            </p>
-            <p>
-                In BT1 most participants read the result of 26 CO2e, which is the result at the final stage of the
-                task, but did not recognise it is a change from the 24 CO2e from the initial screen. This can
-                indicate issues in both system status and recognition rather than recall heuristics. After the
-                participants read the wrong result, we prompted them to read again and stated: “Try to find out
-                how much carbon footprint the ferry produced alone”. Most participants found it tricky to do
-                task one, as the prototype did not help them recall the result of the previous steps and the detail
-                of each row does not show until the next page.
-            </p>
+        <div class="custom-background-color w3-text-black w3-display-container aboutText">
+            <div style="width: 70%">
+                <div style="display: flex">
+                    <div style="margin-right: 3%;">
+                        <h1>About Us</h1>
+                            <h4>
+                                We are a company located in Auckland, New Zealand, our team of five are dedicated to using techology to provide reliable and practical methods to reduce carbon emission.
+                                Our office is located at <i>123A Nelsonview Road, Rosehale</i>, visit us or email us via <i>carbonTiptoe@gmail.com</i>.
+                            </h4>
+                        </div>
+                    <div style="margin: 0 2%;">
+                        <h1>Join Us</h1>
+                        <h4>
+                            Click the <strong>REGISTER</strong> button to join our membership, you can store your report data and monitor your carbon footprint change over time. 
+                            Watch your emission reduce and changes in realtime. Compare your results with your friends and support eachother in helping our planet.
+                        </h4>
+                    </div>
+                </div>
+                <br>
+                <h1>What We Do</h1>
+                <h4>
+                    At <b>Carbon Tiptoe! (CT)</b> we believe big changes starts from every individuals. 
+                    We are here to help you manage your daily habbits to reduce carbon emission to our planet. 
+                    In this website, you can <b>Calculate your weekly carbon footprint</b> in what ever category you choose! 
+                    Compare this with average carbon footprints around the world to see if you meet the achieve line. 
+                    Our What If Report helps you plan your daily habbits, from commuting to work, getting to school to sustainable gas and water use around the house.
+                </h4>
+            </div>
+
+            <div>
+                <button 
+                    class="close w3-display-bottomright w3-display-container"
+                    style="margin: 1% 2%">
+                    Choose a Calculator! >
+                </button>
+            </div>
         </div>
 
         <div class="ct-form" id="ct-form">
-            <div style="background-color: #E5BE01; position: fixed; width: 80%; padding: 10px 0; border-radius: 15px;">
+            <div style="background-color: #E5BE01; position: fixed; width: 50%; padding: 10px 0; border-radius: 15px;">
                 <button
                     onclick="closeForm();"
                     class="close"
@@ -79,11 +100,11 @@
                     Register Form
                 </h1>
             </div>
-            <form style="margin: 0% 5%; margin-top: 9%; margin-bottom: 2%" >
+            <form style="margin: 0% 5%; margin-top: 14%; margin-bottom: 4%" >
                 <div id="userDetails">
                     <div>
                         <label for="givenName">Given Name</label>
-                        <input id="givenName" name="givenName" type="text" placeholder="Enter your given name">
+                        <input id="givenName" name="givenName" type="text" placeholder="Enter your full given name">
                     </div>
                     <div>
                         <label for="surname">Surname</label>
@@ -95,20 +116,22 @@
                     </div>
                     <div>
                         <label for="password">Password</label>
-                        <input id="password" name="password" type="password" placeholder="Enter your password">
+                        <input id="password" name="password" type="password" placeholder="Enter your 8 digits password">
                     </div>
+                    <br>
                     <hr>
                 </div>
 
                 <div id="addresses">
                     <div>
                         <label for="hAddress">Home Address</label>
-                        <input id="hAddress" name="homeAddress" type="text" placeholder="Enter your home address">
+                        <input id="hAddress" name="homeAddress" type="text" placeholder="Enter your home address up to city">
                     </div>
                     <div>
                         <label for="wAddress">Work Address</label>
-                        <input id="wAddress" name="workAddress" type="text" placeholder="Enter your work address">
+                        <input id="wAddress" name="workAddress" type="text" placeholder="Enter your work address up to city">
                     </div>
+                    <br>
                     <hr>
                 </div>
 
@@ -119,8 +142,9 @@
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input id="email" name="email" type="text" placeholder="Enter your email">
+                        <input id="email" name="email" type="text" placeholder="Enter your email (e.g. carbonTiptoe@gmail.com)">
                     </div>
+                    <br>
                     <hr>
                 </div>
                 <button class="submit"> Submit </button>

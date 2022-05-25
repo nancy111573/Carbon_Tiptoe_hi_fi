@@ -1,11 +1,12 @@
-.custom-background-color {
-    color: #000;
+.custom-color {
     background-color: #E5BE01;
-    font-family: "Lato", sans-serif
+}
+.custom-background-color {
+    background-color: #E5BE01;
 }
 .secondary-color {
     color: #fff;
-    background-color: #315CA5;
+    background-color: #3460AD;
 }
 .my-background-color {
     color: #fff;
@@ -19,7 +20,7 @@ button {
     border-radius: 5px;
     padding: 24px 36px;
     color: #fff;
-    background-color: #315CA5;
+    background-color: #3460AD;
 }
 button:hover {
     background-color: #E5BE01;
@@ -30,12 +31,21 @@ button:hover {
     background-color: #ECA600;
 }
 
+.aboutText {
+    padding: 2% 5%; 
+    display: flex
+}
+.aboutText h1 {
+    font-weight: bold;
+    font-size: 27px;
+}
+
 .ct-form {
     position: fixed;
     z-index: 1;
-    left: 10%;
+    left: 25%;
     top: 15%;
-    width: 80%;
+    width: 50%;
     bottom: 10%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -64,7 +74,7 @@ input:focus {
 
 .close {
     float: right;
-    margin-right: 5%;
+    margin-right: 2%;
     font-size: 20px;
     background-color: transparent;
     color: #000;
